@@ -5,18 +5,23 @@ using System.Linq;
 
 namespace Tuan4.Models
 {
-    public partial class BigSchoolContext : DbContext
+    public partial class BigSchoolModel : DbContext
     {
-        public BigSchoolContext()
-            : base("name=BigSchoolContext")
+        public BigSchoolModel()
+            : base("name=BigSchoolModel1")
         {
         }
 
+        public virtual DbSet<Attendance> Attendance { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Course> Course { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Course>()
+                .HasMany(e => e.Attendance)
+                .WithRequired(e => e.Course)
+                .WillCascadeOnDelete(false);
         }
     }
 }

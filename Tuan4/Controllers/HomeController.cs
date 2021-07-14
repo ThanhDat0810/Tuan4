@@ -13,7 +13,7 @@ namespace Tuan4.Controllers
     {
         public ActionResult Index()
         {
-            BigSchoolContext context = new BigSchoolContext();
+            BigSchoolModel context = new BigSchoolModel();
             var upcommingCourse = context.Course.Where(p => p.DateTime > DateTime.Now).OrderBy(p => p.DateTime).ToList();
             foreach(Course i in upcommingCourse)
             {

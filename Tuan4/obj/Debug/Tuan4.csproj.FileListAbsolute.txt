@@ -101,8 +101,14 @@ D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\Microsoft.Owin.Securit
 D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\Microsoft.Owin.Security.OAuth.xml
 D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\obj\Debug\Tuan4.csproj.AssemblyReference.cache
 D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\obj\Debug\Tuan4.csproj.CoreCompileInputs.cache
 D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\obj\Debug\Tuan4.csproj.CopyComplete
 D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\obj\Debug\Tuan4.dll
 D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\obj\Debug\Tuan4.pdb
+D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\System.Net.Http.Formatting.dll
+D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\System.Web.Http.dll
+D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\System.Web.Http.WebHost.dll
+D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\System.Net.Http.Formatting.xml
+D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\System.Web.Http.xml
+D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\bin\System.Web.Http.WebHost.xml
+D:\web\thực hành\Thư mục mới (2)\Tuan4\Tuan4\obj\Debug\Tuan4.csproj.AssemblyReference.cache
