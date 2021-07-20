@@ -20,7 +20,11 @@ namespace Tuan4.Controllers
             BigSchoolModel context = new BigSchoolModel();
             if(context.Attendance.Any(p =>p.Attendee == userID && p.CourseId == attendanceDto.Id))
             {
-                return BadRequest("the attendance already exists !");
+                //return BadRequest("the attendance already exists !");
+                // xóa thông tin khóa học đã đăng ký tham gia trong bảng Attendances
+                context.Attendance.Remove(context.Attendance.SingleOrDefault(p => p.Attendee == userID && p.CourseId == attendanceDto.Id));
+                context.SaveChanges();
+                return Ok("cancel");
             }
             var attendance = new Attendance() { CourseId = attendanceDto.Id, Attendee = User.Identity.GetUserId() };
             context.Attendance.Add(attendance);

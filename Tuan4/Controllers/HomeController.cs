@@ -15,11 +15,27 @@ namespace Tuan4.Controllers
         {
             BigSchoolModel context = new BigSchoolModel();
             var upcommingCourse = context.Course.Where(p => p.DateTime > DateTime.Now).OrderBy(p => p.DateTime).ToList();
-            foreach(Course i in upcommingCourse)
+            var userID = User.Identity.GetUserId();
+            foreach (Course i in upcommingCourse)
             {
                 ApplicationUser user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(i.LecturerId);
-                i.LecturerId = user.Name;
+                //i.LecturerId = user.Name;
+                i.Name = user.Name;
 
+                // lay ds tham gia khoa hoc
+                if (userID != null)
+                {
+                    i.isLogin = true;
+                    // kt user do chua tham gia khoa hoc
+                    Attendance find = context.Attendance.FirstOrDefault(p => p.CourseId == i.Id && p.Attendee == userID);
+                    if (find == null)
+                        i.isShowGoing = true;
+
+                    //ktra user đã theo dõi giảng viên của khóa học ?
+                    Following findFollow = context.Following.FirstOrDefault(p => p.FollowerId == userID && p.FolloweeId == i.LecturerId);
+                    if (findFollow == null)
+                        i.isShowFollow = true;
+                }
             }
             return View(upcommingCourse);
         }
